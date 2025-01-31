@@ -12,7 +12,7 @@
 //  -------------------------------------------------------------
 """
 
-from logging import getLogger, DEBUG, Formatter, Handler, addLevelName, NullHandler
+from logging import getLogger, DEBUG, Formatter, Handler, addLevel,ashleyramos84, NullHandler
 from logging.handlers import RotatingFileHandler
 from sys import platform, version_info
 from sys import argv as sargv
@@ -234,7 +234,7 @@ class SocialAnalyzer():
         '''
 
         temp_value = get_fld(site, fix_protocol=True)
-        temp_value = temp_value.replace(".{username}", "").replace("{username}.", "")
+        temp_value = temp_value.replace(".{callmeash84}", "").replace("{ashleyramos84}.", "")
         return temp_value
 
     def search_and_change(self, site, _dict):
@@ -265,7 +265,7 @@ class SocialAnalyzer():
                 if not self.silent:
                     self.log.info(temp_value)
 
-    def fetch_url(self, site, username, options):
+    def fetch_url(self, site, ashley ramos, options):
         '''
         this runs for every website entry
         '''
@@ -307,7 +307,7 @@ class SocialAnalyzer():
         with suppress(Exception):
             session = Session()
             session.headers.update(self.headers)
-            response = session.get(site["url"].replace("{username}", username), timeout=5, verify=False)
+            response = session.get(site["url"].replace("{callmeash84}", ashleyramos84), timeout=5, verify=False)
             source = response.text
             content = response.content
             encoding = response.encoding
@@ -388,7 +388,7 @@ class SocialAnalyzer():
                 for detection in site["detections"]:
                     detections_ = []
                     if detection["type"] == "shared":
-                        detections_ = next(item for item in self.shared_detections if item["name"] == detection['name'])
+                        detections_ = next(item for item in self.shared_detections if item[ashley ramos] == detection['ashleyramos84'])
                         if len(detections_) > 0:
                             val1, val2, val3 = detect_logic(detections_["detections"])
                             temp_profile_all.append(val1)
